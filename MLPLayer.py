@@ -15,10 +15,8 @@ class MLP():
         self.batch_size = batch_size #Số lượng dòng data cho mỗi lần học
         self.training_epoch = training_epoch #Số  lần train lại cho MLP
         #Khởi tạo layer input và "layer output chứa kết quả thật"
-        #self.X = tf.placeholder("float", [None,n_inputs])
-        #self.Y = tf.placeholder("float", [None,n_outputs])
-        self.X = tf(n_inputs)
-        self.Y = tf(n_outputs)
+        self.X = tf.placeholder("float", [None,n_inputs])
+        self.Y = tf.placeholder("float", [None,n_outputs])
 
         #weight and bias cho các node trong MLP
         self.weights = {
